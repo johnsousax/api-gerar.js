@@ -1,4 +1,3 @@
-// api/gerar.js
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Método não permitido" });
@@ -18,7 +17,7 @@ Inclua: café da manhã, almoço, jantar e lanches. Dê quantidades aproximadas 
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "Authorization": \`Bearer \${process.env.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}\`
+      "Authorization": \`Bearer \${process.env.OPENAI_API_KEY}\`
     },
     body: JSON.stringify({
       model: "gpt-4o-mini",
